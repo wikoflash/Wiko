@@ -1,0 +1,757 @@
+DevSecOps
+თემა I
+ნიკა კოსტავა
+What is DevSecOps?
+• DevSecOps (short for development, security, and operations) is a
+development practice that integrates security initiatives at every
+stage of the software development lifecycle to deliver robust and
+secure applications.
+Benefits of DevSecOps
+• Enhanced Application Security
+DevSecOps embeds a proactive approach to mitigate cybersecurity threats
+early in the development lifecycle
+• Cross-team ownership
+DevSecOps brings development teams and application security teams
+together early in the development process, building a collaborative crossteam approach.
+• Limit Security Vulnerabilities
+Leverage automation to identify, manage, and patch common
+vulnerabilities and exposures (CVE). Use pre-built scanning solutions early
+and often to scan any prebuilt container images in the build pipeline for
+CVEs.
+DevSecOps vs. DevOps
+• DevOps - short for development & operations, solely focuses on
+collaboration between these two integral teams in the development
+process.
+• DevSecOps is an iteration of DevOps in the sense that DevSecOps has
+taken the DevOps model and wrapped security as an additional layer
+to the continual development and operations process.
+Why is DevSecOps Important
+• DevSecOps is important in today’s business environment to mitigate
+the rising frequency of cyber-attacks. By implementing security
+initiatives early and often, applications in an array of industries
+achieve the following benefits.
+How does DevSecOps Work
+• Code
+The first step to a development approach that aligns with DevSecOps is to code in
+segments that are both secured and trusted
+• Build
+To take code and deliver comprehensive container images that contain a core OS
+• Prep
+Before deployment, organizations need to ensure their application complies with
+security policies
+• Deploy
+Scans delivered in previous steps give organizations a comprehensive understanding of
+the application’s security strength
+• Run
+As deployments run, SecOps teams can leverage active deployment analytics, monitoring
+and automation to ensure continuous compliance while also mitigating the risk of
+vulnerabilities that surface following deployment.
+Key Elements for Implementing DevSecOps
+• Every DevSecOps project is unique, but there are common elements
+most organizations will need to implement DevOps successfully.
+• Container Security
+• Infrastructure Automation
+• Application Analysis
+• Identity and Access Management
+• Network Controls and Segmentation
+• Data Controls
+• Auditing, Monitoring, and Alerting
+• Remediation
+DevSecOps
+Week II
+ნიკა კოსტავა
+Week II
+• DevOps
+• Microservices
+• Containers vs Virtual Machines
+• Orchestration
+• Docker compose
+• Kubernetes
+• SAST
+• Dependency Check
+DevOps
+• DevOps is the combination of cultural philosophies, practices, and
+tools that increases an organization’s ability to deliver applications
+and services at high velocity
+Benefits of DevOps
+• Speed
+• Move at high velocity so you can innovate for customers faster, adapt to changing markets better, and
+grow more efficient at driving business results
+• Rapid Delivery
+• Increase the frequency and pace of releases so you can innovate and improve your product faster
+• Reliability
+• Ensure the quality of application updates and infrastructure changes so you can reliably deliver at a more
+rapid pace while maintaining a positive experience for end users
+• Scale
+• Operate and manage your infrastructure and development processes at scale
+• Improved Collaboration
+• Build more effective teams under a DevOps cultural model, which emphasizes values such as ownership
+and accountability
+• Security
+• You can adopt a DevOps model without sacrificing security by using automated compliance policies, finegrained controls, and configuration management techniques
+Monolithic vs. Microservices Architecture
+• Microservices are an architectural and organizational approach to
+software development where software is composed of small
+independent services that communicate over well-defined APIs.
+Benefits of Microservices
+• Agility
+• Microservices foster an organization of small, independent teams that take ownership of their services
+• Flexible Scaling
+• Microservices allow each service to be independently scaled to meet demand for the application feature it
+supports
+• Easy Deployment
+• Microservices enable continuous integration and continuous delivery, making it easy to try out new ideas
+and to roll back if something doesn’t work
+• Technological Freedom
+• Microservices architectures don’t follow a “one size fits all” approach. Teams have the freedom to choose
+the best tool to solve their specific problems
+• Reusable Code
+• Dividing software into small, well-defined modules enables teams to use functions for multiple purposes
+• Resilience
+• Service independence increases an application’s resistance to failure. In a monolithic architecture, if a
+single component fails, it can cause the entire application to fail
+Conteinteiners vs Virtual Machines
+• Virtual machines(VMs) are a
+technology for building virtualized
+computing environments. They have
+been around for quite a while and are
+considered the foundation of the first
+generation of cloud computing
+• Containers are a lighter-weight, more
+agile way of handling virtualization —
+since they don't use a hypervisor, you
+can enjoy faster
+resource provisioning and speedier
+availability of new applications.
+Orchestration
+• Kubernetes vs Docker
+Compose
+• Kubernetes and Docker
+Compose are both container
+orchestration frameworks.
+Kubernetes runs containers
+over a number of computers,
+virtual or real. Docker Compose
+runs containers on a single host
+machine
+SAST
+• SAST takes place very early in the software development life cycle
+(SDLC) as it does not require a working application and can take
+place without code being executed.
+• SAST tools give developers real-time feedback as they code, helping
+them fix issues before they pass the code to the next phase of the
+SDLC.
+• Developers can also create the customized reports they need with
+SAST tools; these reports can be exported offline and tracked using
+dashboards
+• It’s important to note that SAST tools must be run on the application
+on a regular basis, such as during daily/monthly builds, every time
+code is checked in, or during a code release
+Why is SAST an important
+• Developers dramatically outnumber security staff. It can be
+challenging for an organization to find the resources to perform
+code reviews on even a fraction of its applications
+• A key strength of SAST tools is the ability to analyze 100% of
+the codebase
+• SAST tools automatically identify critical vulnerabilities—such
+as buffer overflows, SQL injection, cross-site scripting, and
+others—with high confidence
+key steps to run SAST effectively
+• Finalize the tool
+• Select a static analysis tool that can perform code reviews of applications written in the programming languages
+you use
+• Create the scanning infrastructure, and deploy the tool
+• This step involves handling the licensing requirements, setting up access control and authorization, and procuring
+the resources required (e.g., servers and databases) to deploy the tool
+• Customize the tool
+• Fine-tune the tool to suit the needs of the organization. ntegrate the tool into the build environment, create
+dashboards for tracking scan results, and build custom reports
+• Prioritize and onboard applications
+• Once the tool is ready, onboard your applications. If you have a large number of applications, prioritize the highrisk applications to scan first.
+• Analyze scan results
+• his step involves triaging the results of the scan to remove false positives. Once the set of issues is finalized, they
+should be tracked and provided to the deployment teams for proper and timely remediation
+• Provide governance and training
+• Proper governance ensures that your development teams are employing the scanning tools properly
+Dependency-Check
+• Dependency-Check is a Software Composition Analysis (SCA) tool
+that attempts to detect publicly disclosed vulnerabilities contained
+within a project’s dependencies. It does this by determining if there
+is a Common Platform Enumeration (CPE) identifier for a given
+dependency
+DevSecOps
+Week III
+ნიკა კოსტავა
+Week III
+• What is Container Image
+• Docker Image Architecture
+• Difference Between Docker Containers and Images
+• Parent and Base Images
+• Docker Image Security Best Practices
+• Containerized Architecture
+• Advantages of a Containerized Architecture
+• Container security
+What is Container Image
+• A container image is a static file with executable code that can create
+a container on a computing system. A container image is immutable—
+meaning it cannot be changed, and can be deployed consistently in
+any environment.
+• Container images include everything a container needs to run—the
+container engine such as Docker or CoreOS, system libraries, utilities,
+configuration settings, and specific workloads that should run on the
+container. The image shares the operating system kernel of the host,
+so it does not need to include a full operating system.
+Docker Image Architecture
+• A Docker image is a collection of files, including binaries, source code
+and other dependencies, needed to deploy a container environment.
+In Docker, there are two ways to create an images:
+• Dockerfile—Docker provides a simple, human-readable configuration file that
+specifies what a Docker image should contain.
+• Create an image from an existing container—you can run a container from
+an existing image, modify the container environment, and save the result as a
+new image.
+Difference Between Docker Containers and
+Images
+• A Docker container image describes a container environment. A Docker
+container is an instance of that environment, running on Docker Engine.
+You can run multiple containers from the same image, and all of them will
+contain the same software and configuration, as specified in the image.
+• When you define a Docker image, you can use one or more layers, each of
+which includes system libraries, dependencies and files needed for the
+container environment. Image layers can be reused for different projects.
+• When a container runs, Docker adds a readable/writable top layer over the
+static image layers. This top layer is used by the container to modify files
+during runtime, and can also be used to customize the container. This way,
+multiple containers created from the same image can have different data.
+Parent and Base Images
+• There is a subtle technical different between parent and base images:
+• A base image is an empty container image, which allows advanced users to
+create an image from scratch.
+• A parent image is a pre-configured image that provides some basic
+functionality, such as a stripped-down Linux system, a database such as
+MySQL or PostgreSQL, or a content management system such as WordPress.
+• However, in the container community, the terms “base image” and
+“parent image” are often used interchangeably.
+• There is a large number of ready-made parent images available on
+Docker Hub, and on many other public container repositories. You can
+also use your own images as a parent for new images.
+Containerized Architecture
+• A containerized architecture makes it possible to package software and its dependencies in an
+isolated unit, called a container, which can run consistently in any environment. Containers are
+truly portable, unlike traditional software deployment, in which software could not be moved to
+another environment without errors and incompatibilities.
+• Containers are similar to virtual machines in a traditional virtualized architecture, but they are
+more lightweight – they require less server resources and are much faster to start up. Technically,
+a container differs from a virtual machine because it shares the operating system kernel with
+other containers and applications, while a virtual machine runs a full virtual operating system.
+• Containerization helps developers and operations teams manage and automate software
+development and deployment. Containerization makes it possible to define infrastructure as code
+(IaC) – specifying required infrastructure in a simple configuration file and deploying it as many
+times as needed. It is especially useful for managing microservices applications, which consist of a
+large number of independent components.
+• Containers are a key part of the cloud native landscape, as defined by the Cloud Native
+Computing Foundation (CNCF). They are an essential component of cloud native applications,
+built from the ground up to leverage the elasticity and automation of the cloud.
+Advantages of a Containerized Architecture
+1. Lower costs—on infrastructure operations, because you can run many containers on a single virtual
+machine.
+2. Scalability—at the micro-service level eliminates the need to scale VMs or instances.
+3. Instant replication—of microservices, enabled through deployment sets and replicas.
+4. Flexible routing—you can set this up between services supported natively by containerization platforms.
+5. Resilience—when a container fails, it’s easy to refresh/redeploy with a new container from the same image.
+6. Full portability—between on-premise locations and cloud environments.
+7. OS independent—there is no need to run an OS. All you need is to deploy a container engine on top of a
+host OS.
+8. Fast deployment—of new containers. You can also quickly terminate old containers using the same
+environment.
+9. Lightweight—since containers run without an OS, they are significantly lightweight and much less
+demanding than images.
+10.Faster “ready to compute”—you can start and stop containers within seconds—much faster than VMs.
+Container security
+• Containers are units of software that allows you to deploy applications as
+stand-alone, self-sufficient packages isolated from other activity on a
+machine. Containers are similar to virtual machines (VMs), but do not run
+an entire operating system. Instead, they share access to the operating
+system (OS) kernel, which makes them faster and more lightweight than
+VMs.
+• Container security requires a different approach compared to security in
+traditional environments. Containers need a continuous security strategy
+integrated into the entire software development lifecycle (SDLC). This
+means securing the build pipeline, container images, container host
+machines, container runtimes (such as Docker or containerd), container
+platforms and orchestrators (such as Kubernetes), and application layers.
+The Need for Container Security
+• Container adoption has grown exponentially in the past decade. Containers
+are widely used as lightweight building blocks in software projects, and are
+highly convenient because they contain everything needed to run an
+application—code, runtime, tools, libraries, and configurations. A container
+runs consistently every time regardless of the environment on the host
+machine, is highly portable, and uses fewer resources compared to VMs.
+• Container engines like Docker and container orchestrators like Kubernetes
+include some basic security controls, but they are not secure by default,
+and hardening container runtimes and orchestrators can be complex.
+• Containerized application development also includes a large number of
+third-party software components that can be vulnerable, making it critical
+to scan container images at all stages of development. If there are
+vulnerabilities in the container images, they are inherited by all containers
+deployed from the image
+Network Security
+• In a traditional architecture, network security relied on IP addresses.
+However, in a containerized world, workloads are ephemeral and
+have dynamically assigned IP addresses, making them more difficult
+to secure.
+• Network segmentation and dynamic access controls are critical to
+prevent lateral movement in case a container is compromised, while
+ensuring containers can communicate with legitimate components.
+Types of Container Security Solutions
+• Container Monitoring Solutions
+• A container monitoring solution allows security teams to track an application’s performance.
+The ephemeral nature of containers makes them complex and thus harder to monitor than a
+traditional application that runs on VMs or physical servers. Monitoring tools can collect and
+analyze performance metrics at scale across large containerized environments, even as
+workloads and clusters scale up and down.
+• Container Scanners
+• A container scanning or image scanning tool scans containers and related components to
+identify security threats and detect vulnerabilities. Scanning is a crucial part of container
+security, making this the most important tool for many security and DevOps teams dealing
+with containerized workflows.
+• Container images are available from diverse sources, so maintaining trust in each container
+image is essential. Container scanning allows teams to understand a container or container
+image’s components and associated risks.
+• Trivy is a popular, open source container scanning tool that makes it easy to scan
+vulnerabilities in containers, Kubernetes clusters, and infrastructure as code (IaC) templates.
+Docker Image Security Best Practices
+• Prefer minimal base images—many Docker images use a fully installed operating system
+distribution as their underlying image. If you don’t need general system libraries, avoid using base
+images that install an entire operating system, or other components that are not essential for
+your project, to limit the attack surface.
+• Least privileged user—Dockerfiles must always specify a USER, otherwise they will default to
+running the container as root on the host machine. You should also avoid running applications on
+the container with root privileges. Running as root can have severe security consequences,
+because attackers compromising the container can gain control over the entire host.
+• Sign and verify images—you must make sure the image you are pulling to create your container is
+really the image you selected from a trusted publisher, or created yourself. By using only signed
+images, you can mitigate tampering with the image over the wire (a man in the middle attack), or
+attackers pushing compromised images to a trusted repository.
+• Fix open source vulnerabilities—whenever you use a parent image in production, you need to be
+able to trust all the components it deploys. Automatically scan images as part of your build
+process, to ensure they do not contain vulnerabilities, security misconfigurations, or backdoors.
+Keep in mind new vulnerabilities may be introduced over time, even in images that were
+originally verified as secure.
+Container Security Best Practices
+• Securing Images
+• Base images
+• Most images are created from “base images”. It is important to use a trusted image
+provider. Anyone can publish images to Docker Hub.
+• Root access
+• Finally, just like containers should not run as root on the host, applications within a
+container image should not be granted root access to their container. Create a dedicated
+user account for each application and run it under this account. This is easy to define in a
+Dockerfile.
+Container Security Best Practices
+• Establish strict access control—define who can post new images,
+delete and modify existing images. Periodically evaluate how many
+people have access to the registry, remove unused accounts and
+revoke unneeded permissions.
+• Scan images—when storing images in the registry, scan them for
+vulnerabilities. It is not enough to scan images once—images that
+were at one point safe can become a threat. New vulnerabilities are
+discovered all the time, components can go out of date, and images
+might be compromised by malicious insider or accidental update. To
+address these issues, frequently scan all images stored in the registry.
+Container Security Best Practices
+• Securing Deployment
+• When deploying containers, the most important thing is to ensure the target
+environment is secure. This includes several aspects:
+• Hardening the underlying operating system containers run on.
+• Setting up virtual private cloud (VPC), security groups, and firewall rules.
+• Restricting access to container resources to a limited group of named
+administrator accounts.
+• When using container orchestrators like Kubernetes, restricting API access
+using role-based access control (RBAC) and hardening Kubernetes manifests.
+Container Security Best Practices
+• Securing Runtime
+• Restricting container communications
+• Containers are often used to deploy components of microservices applications. Each
+application component might connect to multiple other components and external services,
+increasing the attack surface
+• Open ports
+• It is critical to expose only the port that the application serves and nothing else, both on
+containers and container hosts. SSH is the only exception, but should also be closely
+controlled and monitored
+• Storage volumes
+• Avoid bind-mounted storage volumes. Prefer to use volumes, and carefully manage them to
+protect their data. Volumes should preferably be read only, and creation and updates of
+storage volumes should be carefully controlled
+• Ensuring only safe images run
+• Even if all images are scanned to and ensure they are secure, there is always the possibility
+that another, unsafe image will be the one actually running in a production environment
+DevSecOps
+Week IV
+ნიკა კოსტავა
+Week IV
+• SAST vs. IAST
+• What is Dynamic Application Security Testing (DAST)?
+• How does DAST work?
+• What problems does DAST solve?
+• Why is DAST vital to application security?
+• How are DAST and SAST different?
+• What Is Runtime Application Self-Protection (RASP)?
+• How RASP Works
+• Benefits of Runtime Application Self-Protection (RASP)
+• Runtime Application Self-Protection (RASP) Use Cases
+SAST vs IAST
+• Interactive Application Security Testing (IAST) combines some of the
+top features of DAST and SAST. Its purpose is to provide application
+security testing within the application, typically during the
+development phase. When configured correctly, IAST solutions offer
+the following capabilities:
+• Accessing all the code in an application.
+• Collecting runtime application information about data flow and control.
+• Accessing configuration data.
+• Monitoring network traffic.
+• Accessing application components such as data, libraries, and frameworks in
+dependencies at the back end.
+SAST vs IAST
+• Compared to SAST and DAST, IAST processes more code, provides more
+reliable results, and generates a more comprehensive view of
+applications and their environments to identify security vulnerabilities.
+• IAST solutions can perform code scans like SAST products, allowing
+them to discover vulnerabilities quickly and support early code fixes.
+Developers can address coding issues sooner to avoid higher costs and
+delays.
+• However, the main problem with IAST is that it uses software agents.
+The instrumentation code snippets are usually small and generally
+harmless, but they can affect the behavior of applications and slow down
+performance. Applying IAST tools can cause problems for highly
+performance-sensitive apps—a long-term concern for agents.
+DAST
+• Dynamic Application Security Testing (DAST) is a procedure that
+actively investigates running applications with penetration tests to
+detect possible security vulnerabilities.
+• Web applications power many mission-critical business processes
+today, from public-facing e-commerce stores to internal financial
+systems. While these web applications can enable dynamic business
+growth, they also often harbor potential weaknesses that, if left
+unidentified and unremediated, could quickly lead to a damaging
+and costly data breach.
+How does DAST work
+• DAST works by simulating automated attacks on an application,
+mimicking a malicious attacker. The goal is to find outcomes or
+results that were not expected and could therefore be used by
+attackers to compromise an application. Since DAST tools don’t
+have internal information about the application or the source code,
+they attack just as an external hacker would—with the same
+limited knowledge and information about the application.
+What problems does DAST solve
+• Applications run the world economy and organizations are under
+tremendous pressure to stay ahead of the curve as our digital world
+accelerates. Businesses must continually innovate in an environment
+where sophisticated, relentless threat actors are ready to exploit any
+opportunity to disrupt, threaten critical data, and do damage. To
+successfully navigate this new world, it is vital to develop and execute a
+plan to ensure their applications are secure.
+• DAST works by simulating automated attacks on an application,
+mimicking a malicious attacker. The goal is to find outcomes or results
+that were not expected and could therefore be used by attackers to
+compromise an application. Since DAST tools don’t have internal
+information about the application or the source code, they attack just as
+an external threat actor would—with the same limited knowledge and
+information about the application.
+Why is DAST vital to application security
+• As more businesses rely on web and mobile applications for success, application security vulnerabilities
+have rapidly become the most prevalent cause of data breaches. Thus, it is more important than ever for
+organizations to protect their applications and code.
+• Challenges that organizations are currently facing
+• The shift to the cloud and cloud-native application technologies is making applications more complex.
+• Massively distributed microservices and serverless functions mean that developers are focused solely on
+their own services, and no one has a complete grasp of the entire codebase.
+• As the sheer number of applications increases, the overall lines of software code deployed to the cloud
+expands the potential attack surface.
+• With more organizations focused on digital transformation, knowledge of the legacy code is waning as
+developers retire or change roles.
+• The prevalence of third-party and open source software make applications more composite in nature. As
+a result, a significant amount of the application code is developed outside the purview of the
+organization.
+• DevOps methodologies help development teams move faster but leave little time for manual or outdated
+security checks.
+How are DAST and SAST different
+What Is Runtime Application SelfProtection
+• Runtime Application Self Protection (RASP) is a security solution
+designed to provide personalized protection to applications. It takes
+advantage of insight into an application’s internal data and state to
+enable it to identify threats at runtime that may have otherwise
+been overlooked by other security solutions.
+How RASP Works
+• RASP wraps around and protects a particular application, rather than a
+general network-level or endpoint-level defensive solution. This more
+targeted deployment location enables RASP to monitor the inputs,
+outputs, and internal state of the application that it is protecting. By
+deploying RASP, developers can identify vulnerabilities within their
+applications. Additionally, the RASP solution can block attempts to
+exploit existing vulnerabilities in deployed applications.
+• RASP’s focused monitoring makes it capable of detecting a wide range of
+threats, including zero-day attacks. Since RASP has insight into the
+internals of an application, it can detect behavioral changes that may
+have been caused by a novel attack. This enables it to respond to even
+zero-day attacks based upon how they affect the target application.
+Benefits of Runtime Application SelfProtection
+• RASP differs from other cybersecurity solutions in its level of focus on a single application. This focus
+enables it to provide a number of security benefits:
+• Contextual Awareness: When a RASP solution identifies a potential threat, it has additional contextual
+information about the current state of the application and what data and code is affected. This context
+can be invaluable for investigating, triaging, and remediating potential vulnerabilities since it indicates
+where the vulnerability is located in the code and exactly how it can be exploited.
+• Visibility into Application-Layer Attacks: RASP has deep visibility into the application layer because it is
+integrated with a particular application. This application-layer visibility, insight, and knowledge can help
+to detect a wider range of potential attacks and vulnerabilities.
+• Zero-Day Protection: While RASP can use signatures to identify attacks, it is not limited to signaturebased detection. By identifying and responding to anomalous behaviors within the protected application,
+RASP can detect and block even zero-day attacks.
+• Lower False Positives: RASP has deep insight into an application’s internals, including the ability to see
+how a potential attack affects the application’s execution. This dramatically increases RASP’s ability to
+differentiate true attacks (which have a true negative impact on application performance and security)
+from false positives (such as SQL injection attempts that are never included in an SQL query). This
+reduction in false positives decreases load on security teams and enables them to focus on true threats.
+Benefits of Runtime Application SelfProtection
+• Lower CapEx and OpEx: RASP is designed to be easy to deploy yet is able to make a significant difference in an
+application’s vulnerability to attack and rate of false positive alerts. This combination reduces both up-front expenses
+(CapEx) and the cost of effectively protecting the application (OpEx) compared to manual patching and web
+application firewalls (WAFs).
+• Easy Maintenance: RASP works based upon insight into an application, not traffic rules, learning, or blacklists. SOC
+teams love this reliability and CISOs appreciate the resource savings. Applications become self-protected and remain
+protected wherever they go.
+• Cloud Support: RASP is designed to integrate with and be deployed as part of the application that it protects. This
+enables it to be deployed in any location where the protected applications can run, including in the cloud.
+Runtime Application Self-Protection
+(RASP) Use Cases
+• Web Application Protection: Web applications and APIs are a crucial
+component of an organization’s infrastructure but can be vulnerable to a wide
+range of attacks. These applications are exposed to the public Internet and are
+often prone to exploitable vulnerabilities. By deploying RASP to protect these
+applications and APIs, an organization can limit the cybersecurity risk and
+attack surface of its web-facing infrastructure.
+• Zero-Day Prevention: While an organization may have processes in place to
+immediately apply patches for critical applications and systems, a patch can
+only be applied after it is developed and released. RASP can be deployed to
+protect critical applications within an organization (which may include web
+applications and APIs) against zero-day vulnerabilities.
+• Cloud Application Protection: Securing the cloud can be complex because
+applications run on leased infrastructure outside of the organization’s network
+perimeter. Integrating RASP into these applications provides them with a high
+level of security in a portable and largely infrastructure-agnostic form.
+DevSecOps
+Week V
+ნიკა კოსტავა
+Week V
+• What is a Cyber Attack
+• Types of Cyber Attacks
+• Microservices — OWASP Security Threats
+• Best practices for microservices security
+What is a Cyber Attack
+• When there is an unauthorized system/network access by a
+third party, we term it as a cyber attack. The person who carries
+out a cyberattack is termed as a hacker/attacker.
+• Cyber-attacks have several negative effects. When an attack is
+carried out, it can lead to data breaches, resulting in data loss
+or data manipulation. Organizations incur financial losses,
+customer trust gets hampered, and there is reputational
+damage. To put a curb on cyberattacks, we
+implement cybersecurity. Cybersecurity is the method of
+safeguarding networks, computer systems, and their
+components from unauthorized digital access.
+Malware Attack
+• “Malware” refers to malicious software viruses including worms,
+spyware, ransomware, adware, and trojans.
+• The trojan virus disguises itself as legitimate software.
+Ransomware blocks access to the network's key components,
+whereas Spyware is software that steals all your confidential
+data without your knowledge. Adware is software that displays
+advertising content such as banners on a user's screen.
+• Malware breaches a network through a vulnerability. When the
+user clicks a dangerous link, it downloads an email attachment
+or when an infected pen drive is used.
+How we can prevent a malware attack
+• Use antivirus software. It can protect your computer against
+malware.
+• Use firewalls. Firewalls filter the traffic that may enter your
+device.
+• Stay alert and avoid clicking on suspicious links.
+• Update your OS and browsers, regularly.
+Phishing Attack
+• Phishing attacks are one of the most prominent widespread
+types of cyberattacks. It is a type of social engineering attack
+wherein an attacker impersonates to be a trusted contact and
+sends the victim fake mails.
+• Unaware of this, the victim opens the mail and clicks on the
+malicious link or opens the mail's attachment. By doing so,
+attackers gain access to confidential information and account
+credentials. They can also install malware through a phishing
+attack.
+How we can prevent Phishing Attack
+• Most phishing emails have significant errors like spelling
+mistakes and format changes from that of legitimate sources.
+• Make use of an anti-phishing toolbar.
+• Update your passwords regularly.
+• Security tranings
+Password Attack
+• It is a form of attack wherein a hacker cracks your password with various
+programs and password cracking tools like Aircrack, Cain, Abel, John the Ripper,
+Hashcat, etc. There are different types of password attacks like brute force
+attacks, dictionary attacks, and keylogger attacks.
+• Listed below are a few ways to prevent password attacks:
+• Use strong alphanumeric passwords with special characters.
+• Abstain from using the same password for multiple websites or accounts.
+• Update your passwords; this will limit your exposure to a password attack.
+• Do not have any password hints in the open.
+Man-in-the-Middle Attack
+• A Man-in-the-Middle Attack (MITM) is also known as an
+eavesdropping attack. In this attack, an attacker comes in between a
+two-party communication, i.e., the attacker hijacks the session
+between a client and host. By doing so, hackers steal and
+manipulate data.
+• As seen below, the client-server communication has been cut off,
+and instead, the communication line goes through the hacker.
+• MITM attacks can be prevented by following the below-mentioned
+steps:
+• Be mindful of the security of the website you are using. Use encryption on
+your devices.
+• Refrain from using public Wi-Fi networks.
+SQL Injection Attack
+• A Structured Query Language (SQL) injection attack occurs on a
+database-driven website when the hacker manipulates a standard SQL
+query. It is carried by injecting a malicious code into a vulnerable website
+search box, thereby making the server reveal crucial information.
+• This results in the attacker being able to view, edit, and delete tables in the
+databases. Attackers can also get administrative rights through this.
+• To prevent a SQL injection attack:
+• Use an Intrusion detection system, as they design it to detect unauthorized access to
+a network.
+• Carry out a validation of the user-supplied data. With a validation process, it keeps
+the user input in check
+Denial-of-Service Attack
+• A Denial-of-Service Attack is a significant threat to companies. Here, attackers
+target systems, servers, or networks and flood them with traffic to exhaust their
+resources and bandwidth.
+• When this happens, catering to the incoming requests becomes overwhelming for
+the servers, resulting in the website it hosts either shut down or slow down. This
+leaves the legitimate service requests unattended.
+• It is also known as a DDoS (Distributed Denial-of-Service) attack when attackers
+use multiple compromised systems to launch this attack.
+• Let’s now look at how to prevent a DDoS attack:
+• Run a traffic analysis to identify malicious traffic.
+• Understand the warning signs like network slowdown, intermittent website shutdowns, etc.
+At such times, the organization must take the necessary steps without delay.
+• Formulate an incident response plan, have a checklist and make sure your team and data
+center can handle a DDoS attack.
+• Outsource DDoS prevention to cloud-based service providers.
+supply chain attack
+• A supply chain attack, also called a value-chain or third-party
+attack, occurs when someone infiltrates your system through an
+outside partner or provider with access to your systems and
+data. This has dramatically changed the attack surface of the
+typical enterprise in the past few years, with more suppliers and
+service providers touching sensitive data than ever before.
+• The risks associated with a supply chain attack have never
+been higher, due to new types of attacks, growing public
+awareness of the threats, and increased oversight from
+regulators. Meanwhile, attackers have more resources and
+tools at their disposal than ever before, creating a perfect
+storm.
+Zero Day Attack
+• A zero-day attack happens once that flaw, or software/hardware
+vulnerability, is exploited and attackers release malware before a developer
+has an opportunity to create a patch to fix the vulnerability—hence “zeroday.”
+• A company’s developers create software, but unbeknownst to them it contains a
+vulnerability.
+• The threat actor spots that vulnerability either before the developer does or acts on
+it before the developer has a chance to fix it.
+• The attacker writes and implements exploit code while the vulnerability is still open
+and available
+• After releasing the exploit, either the public recognizes it in the form of identity or
+information theft, or the developer catches it and creates a patch to staunch the
+cyber-bleeding.
+Microservices
+Lack of Resources & Rate Limiting
+• Quite often, APIs do not impose any restrictions on the size or
+number of resources that can be requested by the client/user. Not
+only can this impact the API server performance, leading to Denial of
+Service (DoS), but also leaves the door open to authentication flaws
+such as brute force.
+• Example Scenarios
+• User bombards the API with millions of requests in a short span of time, forcing services to reach its
+resource limits and leads to DDOS.
+• Product Catalog GET API returns the list of products but it relies on client API (implementing pagination) to
+send the page limit. An attacker can set the limit to a large number which can push the service to return a
+huge payload. Service consumes all of its networks and compute resources for one request and becomes
+unavailable for other requests.
+• User Profile API accepts the profile pic but does not limit the size of it. An attacker can send a large file and
+again bring down the service performance.
+• Solutions
+• Limit the “request payload size” for the service. If the parameter is a string, set the maximum length. If the
+parameter is an array set the maximum number of elements. If the parameter is of type media or document
+set the maximum size.
+• Limit the “number of request rate per client ” based on a specific user, IP address, or the calling service.
+• Limit the “number of records per response ” at the service side. This limit is independent of what the limit is
+coming from the client/user end.
+• Limit the Memory — The limit on memory cannot be set at the code level. If you are using containers to
+deploy your services, this is piece of cake though. Docker provides easy options to do it.
+• Limit the CPU cycles — Similar to the memory, this limit can also be set through Docker. You can define the
+“maximum CPU” cycles (of a host) a particular container can consume
+Security Misconfigurations
+• Security misconfiguration is commonly a result of unsecure default
+configurations, incomplete or ad-hoc configurations, open cloud
+storage, misconfigured HTTP headers, unnecessary HTTP methods
+• Example Scenarios
+• TLS is configured for Server/Services/API Gateway but they can still be accessed through plain HTTP.
+• Database Server is running with its default configuration where authentication is disabled by default.
+• Docker is running with default user — root.
+• Solutions
+• A repeatable hardening process should be applied to each technology and platform in the ecosystem
+including microservices, cloud services, databases, files/storage, open id/OAuth servers, application servers,
+container/container orchestration services, service mesh frameworks, etc.
+• Default configurations should be well inspected and updated as needed.
+• All network communications should be secured including client-APIs, API interactions, and media access,
+based on TLS, Cors policies, firewall configuration, etc.
+• A task to review and update configurations across the entire API stack should be in place enabling the
+continuous deployment of services. Ensure continuous & automated assessment of the configurations.
+• To prevent exception traces and other valuable information from being sent back to attackers, if
+applicable, define and enforce all API response payload schemas including error responses.
+• Ensure API can only be accessed by the specified HTTP verbs. All other HTTP verbs should be disabled
+(e.g. HEAD).
+• APIs expecting to be accessed from browser-based clients (e.g., WebApp front-end) should implement
+a proper Cross-Origin Resource Sharing (CORS) policy.
+Best practices for microservices security
+• Defense in Depth Mechanism
+• As microservices are known to adopt any mechanism on a granular level, you
+can apply the Defense in Depth mechanism to make the services more secure.
+In layman terms, the Defense in Depth mechanism is basically a technique
+through which you can apply layers of security countermeasures to protect
+the sensitive services. So, you just have to identify the services with the most
+sensitive information and then apply a number of security layers to protect
+them. In this way, you can make sure that any potential attacker cannot crack
+the security on a single go, and has to go forward and try to crack the defense
+mechanism of all the layers.
+Best practices for microservices security
+• Tokens and API Gateway
+• Often, when you open an application, you see a dialog box saying, “Accept the License Agreement
+and permission for cookies”. What does this message signify? Well, once you accept it, your user
+credentials will be stored and a session will be created. Now, the next time you go on the same
+page, the page will be loaded from the cache memory rather than the servers itself. Before this
+concept came into the picture, sessions were stored on the server-side centrally. But, this was one
+of the biggest barriers in horizontally scaling, the application.
+• Tokens
+• So, the solution to this problem is to use tokens, to record the user credentials. These tokens are
+used to easily identify the user and are stored in the form of cookies. Now, each time a client
+requests a web page, the request is forwarded to the server, and then, the server determines
+whether the user has access to the requested resource or not.
+• Now, the main problem is tokens where the user information is stored. So, the data of tokens need
+to be encrypted to avoid any exploitation from 3 rd party resources. Jason Web Format or most
+commonly known as JWT is an open standard that defines the token format, provides libraries for
+various languages, and also encrypts those tokens.
+Best practices for microservices security
+• API Gateways
+• API Gateways add as an extra element to secure services through token
+authentication. The API Gateway acts an entry point to all the client requests
+and efficiently hides the microservices from the client. So, the client has no
+direct access to microservices and thus in that way, no client can exploit any
+of the services.
