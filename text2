@@ -1,0 +1,52 @@
+K8s 
+Kubernetes- (K8s) - ორკესტრაციის პლატფორმა კონტეინერების მენეჯმენტისთვის. orchestrates - computing, networking & storage.
+Kubectl - ჩვეულებრივი CLI, რომელიც გვეხმარება control plane_სთან კომუნიკაციაში.
+examples: 
+•	kubectl get pods 
+•	kubectl describe pods 
+•	kubectl get services
+•	kubectl get configmap
+Control plane - manages worker nodes & pods in cluster. კონტროლ ფლეინი კლასტერში "იღებს" გლობალურ გადაწყვეტილებებს: 
+მაგალითად: scheduling, starting up new pod. 
+control plane შეიძლება კლასტერის ნებისმიერ მანქნაზე გაეშვას. რეკომენდაციაა, რომ ცალკე მანქანაზე გვქონდეს.
+Kube-apiserver - control planes_ს კომპონენტი, რომელიც აექსპოზებს (expose) kubernetes API_ს. ანუ ეს აპისერვერი არის control plane_ს Frontend.
+kube-apiserver scale horizontally and scales more instances.
+Etcd - key value სანახი, სადაც ინახება ყველა მონაცემი ბექაპისთვის. All kubernetes onjects are stored in etcd.
+რამე რომ მოხდეს კლასტერში, ბექაპი უნდა ავიღოთ etcd_დან. 
+შეგვიძლია 2 სახის ბექაპი:
+•	etcd built in snapshot 
+•	volume snapshot
+
+Kube-scheduler - control plane_ს კომპონენტი, რომელიც უყურებს ახლად შექმნილ პოდებს, რომელიც ჯერ არ არის node_ზე მიმაგრებული. არჩევს node_ს და უშვებს ამ პოდებს მასში.
+გადაწყვეტას როგორ იღებს? - resource requirement, hardware/software policies, data locality და ა.შ
+Kube-controller-manager - control plane_ს კომპონენტი, რომელიც კონტროლერის პროცესების უშვებს. კონტროლერის ტიპები: Node controller, Job controller, Endpoints controller, service account & Token controllers.
+Kubelet - აგენტი, რომელიც კლასტერში არსებულ თითო ნოუდზე ეშვება. It makes sure that containers are running in a Pod. healthcheck_ვით ამოწმებს, რამდენად კარგად ეშვება კონტეინერები.
+Kube-proxy - ქსელის პროქსი, რომელიც კლასტერში არსებულ თითო ნოუდზე ეშვება. ამით ვქმნით ქსელის წესებს ნოუდებში. იყენებს Os_ის packer filtering layer_ს წესებისთვის და თუ ასეთი არ გვაქვს თავისით მართავს ტრეფიკს.
+Node - ნოუდი არის ფიზიკური ან ვირტუალური მანქანა, სადაც გაშვებულია პოდები. ნოუდები იმართება control plane_ით. შეიძლება ბევრი პოდი გვქონდეს 1 ნოუდში. 
+1 Node უშვებს:
+•	kubelet <- პასუხისმგებელია control plane & node შორის კომუნიკაციაზე.
+•	container (Docker for example)
+
+ 
+Pod - მარტივად to host application instance. აბსტრაქტული რაღაც, სადაც დავაჯგუფებთ 1+ აპლიკაციის კონტეინერებს და მათ shared resource_ებს.
+მაგალითად: 
+•	Storage, as Volume; 
+•	Networking as IP address; 
+•	Info - image version, port num.
+შეგვიძლია 1+ კონტეინერი გავუშვათ pod_ში, ლოგიკურად დაკავშირებული.
+
+Cluster is a single system made up of servers and other resources, A Kubernetes cluster is a set of nodes that run containerized applications. Containerizing applications packages an app with its dependences and some necessary services. They are more lightweight and flexible than virtual machines. In this way, Kubernetes clusters allow for applications to be more easily developed, moved and managed.
+Container is A package that relies on virtual isolation technology to deploy and run applications that access a shared OS kernel. Each container that you run is repeatable; the standardization from having dependencies included means that you get the same behavior wherever you run it.
+
+kubectl expose Take a replication controller, service, replica set or pod and expose it as a new Kubernetes service
+A Deployment provides declarative updates for Pods and ReplicaSets.
+
+Terminology For clarity, this guide defines the following terms: 
+● Node: A worker machine in Kubernetes, part of a cluster. 
+● Cluster: A set of Nodes that run containerized applications managed by Kubernetes. For this example, and in most common Kubernetes deployments, nodes in the cluster are not part of the public internet. 
+● Edge router: A router that enforces the firewall policy for your cluster. This could be a gateway managed by a cloud provider or a physical piece of hardware.
+ ● Cluster network: A set of links, logical or physical, that facilitate communication within a cluster according to the Kubernetes networking model.
+ ● Service: A Kubernetes Service that identifies a set of Pods using labelselectors. Unless mentioned otherwise, Services are assumed to have virtual IPs only routable within the cluster network.
+
+What is Ingress Default Backend?  An API object that manages external access to the services in a cluster, typically HTTP. Ingress may provide load balancing, SSL termination and name-based virtual hosting. Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+
